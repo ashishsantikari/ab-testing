@@ -5,8 +5,9 @@ import classnames from 'classnames';
 const Button = ({children, exp}) => {
 
     let btnColor = classnames({
-        "button" : !exp,
-        "button-blue" : exp,
+        "button" : exp === 0,
+        "button-blue" : exp === 1,
+        "button-red": exp === 2
     });
 
     return (

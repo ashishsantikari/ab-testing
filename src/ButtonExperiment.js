@@ -16,7 +16,7 @@ const ButtonExperiment = () => {
             if (window.google_optimize !== undefined) {
                 let vr = window.google_optimize.get('xvEE-DOaQHCRq55we33RRA');
                 console.log(`VR ${vr}`);
-                setVariant(vr);
+                setVariant(parseInt(vr));
                 clearInterval(intervalId);
             }
         }, 100);
@@ -28,11 +28,13 @@ const ButtonExperiment = () => {
 
     switch (parseInt(variant)) {
         case 0:
-            return <Button>Control</Button>;
+            return <Button exp={0}>Control</Button>;
         case 1:
-            return <Button exp>Variant</Button>;
+            return <Button exp={1}>Variant</Button>;
+        case 2:
+            return <Button exp={2}>Free iPhone 11 pro? Click Here</Button>;
         default:
-            return <Button>Control</Button>;
+            return <Button exp={0}>Control</Button>;
     }
 };
 
