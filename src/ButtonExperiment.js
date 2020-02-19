@@ -10,12 +10,12 @@ const ButtonExperiment = () => {
     async function loadVariant() {
         if (window.dataLayer) {
             await window.dataLayer.push({ event: "optimize.activate" });
-            console.log("VARIANT", variant);
+
         }
         intervalId = setInterval(() => {
             if (window.google_optimize !== undefined) {
-                const variant = window.google_optimize.get('xvEE-DOaQHCRq55we33RRA');
-                setVariant(variant);
+                setVariant(window.google_optimize.get('xvEE-DOaQHCRq55we33RRA'));
+                console.log("VARIANT", variant);
                 clearInterval(intervalId);
             }
         }, 100);
