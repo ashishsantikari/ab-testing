@@ -27,11 +27,11 @@ const ButtonExperiment = () => {
 
     switch (variant) {
         case 0:
-            return <Button>Get iPhone for 100́ Euros</Button>;
+            return <Button>Control</Button>;
         case 1:
-            return <Button exp>Get iPhone for free!!! Click now!!!</Button>;
+            return <Button exp>Variant</Button>;
         default:
-            return <Button exp>Get iPhone for free!!! Click now!!!</Button>;
+            return <Button>Control</Button>;
     }
 };
 

@@ -5,7 +5,7 @@ import classnames from 'classnames';
 const Button = ({children, exp}) => {
 
     let btnColor = classnames({
-       "button" : !exp,
+        "button" : !exp,
         "button-blue" : exp,
     });
 
