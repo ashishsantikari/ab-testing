@@ -1,13 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
-import Button from "./Button";
+import ButtonExperiment from "./ButtonExperiment";
 
 function App() {
   return (
     <div className="App">
-      <Button >Get New iPhone for free!!!</Button>
+      <ButtonExperiment/>
     </div>
   );
 }
