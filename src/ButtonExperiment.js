@@ -14,8 +14,9 @@ const ButtonExperiment = () => {
         }
         intervalId = setInterval(() => {
             if (window.google_optimize !== undefined) {
-                setVariant(window.google_optimize.get('xvEE-DOaQHCRq55we33RRA'));
-                console.log("VARIANT", variant);
+                let vr = window.google_optimize.get('xvEE-DOaQHCRq55we33RRA');
+                console.log(`VR ${vr}`);
+                setVariant(vr);
                 clearInterval(intervalId);
             }
         }, 100);
@@ -25,7 +26,7 @@ const ButtonExperiment = () => {
         loadVariant().then(r => r);
     }, []);
 
-    switch (variant) {
+    switch (parseInt(variant)) {
         case 0:
             return <Button>Control</Button>;
         case 1:
