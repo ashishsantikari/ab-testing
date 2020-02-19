@@ -14,7 +14,7 @@ const ButtonExperiment = () => {
         }
         intervalId = setInterval(() => {
             if (window.google_optimize !== undefined) {
-                let vr = window.google_optimize.get('xvEE-DOaQHCRq55we33RRA');
+                let vr = window.google_optimize.get('7WEUM8vJQZ6XdRgXW7nNGA');
                 console.log(`VR ${vr}`);
                 setVariant(parseInt(vr));
                 clearInterval(intervalId);
