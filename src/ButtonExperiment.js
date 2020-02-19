@@ -10,6 +10,7 @@ const ButtonExperiment = () => {
     async function loadVariant() {
         if (window.dataLayer) {
             await window.dataLayer.push({ event: "optimize.activate" });
+            console.log("VARIANT", variant);
         }
         intervalId = setInterval(() => {
             if (window.google_optimize !== undefined) {
@@ -30,7 +31,7 @@ const ButtonExperiment = () => {
         case 1:
             return <Button exp>Get iPhone for free!!! Click now!!!</Button>;
         default:
-            return <Button>Get iPhone for 100́ Euros</Button>;
+            return <Button exp>Get iPhone for free!!! Click now!!!</Button>;
     }
 };
 
